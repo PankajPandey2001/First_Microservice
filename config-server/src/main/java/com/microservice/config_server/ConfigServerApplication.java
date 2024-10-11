@@ -8,6 +8,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer // this is the FIRST STEP WE HAD TO DO
 // SECOND WE WILL GO for configuration to application.yaml
 
+
+// seeing any change
 public class ConfigServerApplication {
 
 	public static void main(String[] args) {
