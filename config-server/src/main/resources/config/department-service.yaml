@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+#now we neeed to publish all matrices to zipkings , but bydefault all matrices deosnt
+#get published , there is some probability concept
+#so we need to set probability to 1
+
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0

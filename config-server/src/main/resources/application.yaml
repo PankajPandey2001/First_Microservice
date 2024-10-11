@@ -1,0 +1,16 @@
+server:
+  port: 8088
+
+# we have to choice either creatae a githbu repo and add configuratoin there
+# but for now we will do it here only ;
+
+spring:
+  profiles:
+    active: native
+  # now this above configuration is because by deffualt profile is git , but
+  # for this porject we will use local configuration
+
+
+# now we will also have to add
+  #. (1) dependency in all the services which will get there config from this confi-sevice ,
+  # (2) and also unke application.yaml mein jaake config import karna padhega .

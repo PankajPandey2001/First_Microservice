@@ -1,0 +1,33 @@
+server:
+  port: 8761
+
+
+spring:
+  application:
+    name: service-registry
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+
+      #/*eureka.client.register-with-eureka: This setting indicates whether this instance should
+         #register itself with another Eureka server. Since this configuration is for a Eureka Server,
+         #it is set to false because a Eureka server does not need to register with itself.
+
+
+      #eureka.client.fetch-registry: This setting indicates whether this instance should fetch the
+        #registry from another Eureka server. It is also set to false for the same reason as above.
+
+
+    #serviceUrl.defaultZone:
+     # This property defines the URL that other services will use to communicate with this Eureka server.
+      #The URL is constructed using placeholders:
+     #${eureka.instance.hostname} will be replaced with localhost.
+     #${server.port} will be replaced with 8761.
+     #Thus, the final URL will be https://localhost:8761/eureka/. This URL is where services can send
+     # their registration requests and where clients can query for available services.
